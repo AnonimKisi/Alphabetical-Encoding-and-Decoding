@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Made by AnonimKisi
+using System;
 
 namespace ConsoleApp3
 {
@@ -6,6 +7,7 @@ namespace ConsoleApp3
     {
         static void Main()
         {
+            Console.Title = "Made by AnonimKisi";
             Console.WriteLine("----------------------------------------------------------------------------------");
             Console.WriteLine("Encoding: 1");
             Console.WriteLine("Decoding: 2");
