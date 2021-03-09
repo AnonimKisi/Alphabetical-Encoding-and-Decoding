@@ -1,7 +1,7 @@
-﻿//Made by AnonimKisi
+//Made by AnonimKisi
 using System;
 
-namespace ConsoleApp3
+namespace Encryption_and_Decryption
 {
     class Program
     {
@@ -17,254 +17,260 @@ namespace ConsoleApp3
             switch (input)
             {
                 case 1:
-                    Console.Write("Write the message that you wish you encrypt (leave a space between each letter): ");
-
-                    string phrase = Console.ReadLine();
-
-                    string[] words = phrase.Split(' ');
-
+                    Console.Write("Write the message that you wish you encrypt: ");
+                    string text = Console.ReadLine();
+                    char[] chars = text.ToCharArray(0, text.Length);
                     Console.Write("\nEncrpyted version: ");
 
-                    foreach (var words_1 in words)
+                    foreach (char letters in chars)
                     {
                         string storing_encrypted_data = "1";
                         //------------------------------------
-                        if (words_1 == "a" || words_1 == "A")
+                        if (letters == 'a' || letters == 'A')
                         {
                             storing_encrypted_data = "2";
                         }
-                        if (words_1 == "b" || words_1 == "B")
+                        if (letters == 'b' || letters == 'B')
                         {
                             storing_encrypted_data = "3";
                         }
-                        if (words_1 == "c" || words_1 == "C")
+                        if (letters == 'c' || letters == 'C')
                         {
                             storing_encrypted_data = "4";
                         }
-                        if (words_1 == "d" || words_1 == "D")
+                        if (letters == 'd' || letters == 'D')
                         {
                             storing_encrypted_data = "5";
                         }
-                        if (words_1 == "e" || words_1 == "E")
+                        if (letters == 'e' || letters == 'E')
                         {
                             storing_encrypted_data = "6";
                         }
-                        if (words_1 == "f" || words_1 == "F")
+                        if (letters == 'f' || letters == 'F')
                         {
                             storing_encrypted_data = "7";
                         }
-                        if (words_1 == "g" || words_1 == "G")
+                        if (letters == 'g' || letters == 'G')
                         {
                             storing_encrypted_data = "8";
                         }
-                        if (words_1 == "h" || words_1 == "H")
+                        if (letters == 'h' || letters == 'H')
                         {
                             storing_encrypted_data = "9";
                         }
-                        if (words_1 == "i" || words_1 == "I")
+                        if (letters == 'i' || letters == 'I')
                         {
                             storing_encrypted_data = "10";
                         }
-                        if (words_1 == "j" || words_1 == "J")
+                        if (letters == 'j' || letters == 'J')
                         {
                             storing_encrypted_data = "11";
                         }
-                        if (words_1 == "k" || words_1 == "K")
+                        if (letters == 'k' || letters == 'K')
                         {
                             storing_encrypted_data = "12";
                         }
-                        if (words_1 == "l" || words_1 == "L")
+                        if (letters == 'l' || letters == 'L')
                         {
                             storing_encrypted_data = "13";
                         }
-                        if (words_1 == "m" || words_1 == "M")
+                        if (letters == 'm' || letters == 'M')
                         {
                             storing_encrypted_data = "14";
                         }
-                        if (words_1 == "n" || words_1 == "N")
+                        if (letters == 'n' || letters == 'N')
                         {
                             storing_encrypted_data = "15";
                         }
-                        if (words_1 == "o" || words_1 == "O")
+                        if (letters == 'o' || letters == 'O')
                         {
                             storing_encrypted_data = "16";
                         }
-                        if (words_1 == "p" || words_1 == "P")
+                        if (letters == 'p' || letters == 'P')
                         {
                             storing_encrypted_data = "17";
                         }
-                        if (words_1 == "q" || words_1 == "Q")
+                        if (letters == 'q' || letters == 'Q')
                         {
                             storing_encrypted_data = "18";
                         }
-                        if (words_1 == "r" || words_1 == "R")
+                        if (letters == 'r' || letters == 'R')
                         {
                             storing_encrypted_data = "19";
                         }
-                        if (words_1 == "s" || words_1 == "S")
+                        if (letters == 's' || letters == 'S')
                         {
                             storing_encrypted_data = "20";
                         }
-                        if (words_1 == "t" || words_1 == "T")
+                        if (letters == 't' || letters == 'T')
                         {
                             storing_encrypted_data = "21";
                         }
-                        if (words_1 == "u" || words_1 == "U")
+                        if (letters == 'u' || letters == 'U')
                         {
                             storing_encrypted_data = "22";
                         }
-                        if (words_1 == "v" || words_1 == "V")
+                        if (letters == 'v' || letters == 'V')
                         {
                             storing_encrypted_data = "23";
                         }
-                        if (words_1 == "w" || words_1 == "W")
+                        if (letters == 'w' || letters == 'W')
                         {
                             storing_encrypted_data = "24";
                         }
-                        if (words_1 == "x" || words_1 == "X")
+                        if (letters == 'x' || letters == 'X')
                         {
                             storing_encrypted_data = "25";
                         }
-                        if (words_1 == "y" || words_1 == "Y")
+                        if (letters == 'y' || letters == 'Y')
                         {
                             storing_encrypted_data = "26";
                         }
-                        if (words_1 == "z" || words_1 == "Z")
+                        if (letters == 'z' || letters == 'Z')
                         {
                             storing_encrypted_data = "1";
+                        }
+                        if(letters == ' ')
+                        {
+                            storing_encrypted_data = "0";
                         }
                         //--------------------------------
                         string new_words;
 
                         if (storing_encrypted_data == "1")
                         {
-                            new_words = " D";
+                            new_words = "D";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "2")
                         {
-                            new_words = " E";
+                            new_words = "E";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "3")
                         {
-                            new_words = " F";
+                            new_words = "F";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "4")
                         {
-                            new_words = " G";
+                            new_words = "G";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "5")
                         {
-                            new_words = " H";
+                            new_words = "H";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "6")
                         {
-                            new_words = " I";
+                            new_words = "I";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "7")
                         {
-                            new_words = " J";
+                            new_words = "J";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "8")
                         {
-                            new_words = " K";
+                            new_words = "K";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "9")
                         {
-                            new_words = " L";
+                            new_words = "L";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "10")
                         {
-                            new_words = " M";
+                            new_words = "M";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "11")
                         {
-                            new_words = " N";
+                            new_words = "N";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "12")
                         {
-                            new_words = " O";
+                            new_words = "O";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "13")
                         {
-                            new_words = " P";
+                            new_words = "P";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "14")
                         {
-                            new_words = " Q";
+                            new_words = "Q";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "15")
                         {
-                            new_words = " R";
+                            new_words = "R";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "16")
                         {
-                            new_words = " S";
+                            new_words = "S";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "17")
                         {
-                            new_words = " T";
+                            new_words = "T";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "18")
                         {
-                            new_words = " U";
+                            new_words = "U";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "19")
                         {
-                            new_words = " V";
+                            new_words = "V";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "20")
                         {
-                            new_words = " W";
+                            new_words = "W";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "21")
                         {
-                            new_words = " X";
+                            new_words = "X";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "22")
                         {
-                            new_words = " Y";
+                            new_words = "Y";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "23")
                         {
-                            new_words = " Z";
+                            new_words = "Z";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "24")
                         {
-                            new_words = " A";
+                            new_words = "A";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "25")
                         {
-                            new_words = " B";
+                            new_words = "B";
                             Console.Write(new_words);
                         }
                         if (storing_encrypted_data == "26")
                         {
-                            new_words = " C";
+                            new_words = "C";
                             Console.Write(new_words);
+                        }
+                        if (storing_encrypted_data == "0")
+                        {
+                            new_words = " ";
+                            Console.Write(" ");
                         }
                     }
                     Console.WriteLine();
@@ -272,227 +278,233 @@ namespace ConsoleApp3
                     break;
                 //---------------------------------------------------------------------------------------------------------
                 case 2:
-                    Console.Write("Write the encrypted message that you wish you decrypt (leave a space between each letter): ");
+                    Console.Write("Write the encrypted message that you wish you decrypt: ");
 
-                    string word = Console.ReadLine();
-
-                    string[] bunch_of_words = word.Split(' ');
+                    text = Console.ReadLine();
+                    chars = text.ToCharArray(0, text.Length);
 
                     Console.Write("\nDecrypted version: ");
 
-                    foreach (var the_words in bunch_of_words)
+                    foreach (char letters in chars)
                     {
-                        string new_words = " ";
-                        string storing_encrypted_data = " ";
+                        string storing_encrypted_data = "1";
                         //----------------------------------
-                        if (the_words == "A" || the_words == "a")
+                        if (letters == 'A' || letters == 'a')
                         {
-                            new_words = "24";
+                            storing_encrypted_data = "24";
                         }
-                        if (the_words == "B" || the_words == "b")
+                        if (letters == 'B' || letters == 'b')
                         {
-                            new_words = "25";
+                            storing_encrypted_data = "25";
                         }
-                        if (the_words == "C" || the_words == "c")
+                        if (letters == 'C' || letters == 'c')
                         {
-                            new_words = "26";
+                            storing_encrypted_data = "26";
                         }
-                        if (the_words == "D" || the_words == "d")
+                        if (letters == 'D' || letters == 'd')
                         {
-                            new_words = "1";
+                            storing_encrypted_data = "1";
                         }
-                        if (the_words == "E" || the_words == "e")
+                        if (letters == 'E' || letters == 'e')
                         {
-                            new_words = "2";
+                            storing_encrypted_data = "2";
                         }
-                        if (the_words == "F" || the_words == "f")
+                        if (letters == 'F' || letters == 'f')
                         {
-                            new_words = "3";
+                            storing_encrypted_data = "3";
                         }
-                        if (the_words == "G" || the_words == "g")
+                        if (letters == 'G' || letters == 'g')
                         {
-                            new_words = "4";
+                            storing_encrypted_data = "4";
                         }
-                        if (the_words == "H" || the_words == "h")
+                        if (letters == 'H' || letters == 'h')
                         {
-                            new_words = "5";
+                            storing_encrypted_data = "5";
                         }
-                        if (the_words == "I" || the_words == "i")
+                        if (letters == 'I' || letters == 'i')
                         {
-                            new_words = "6";
+                            storing_encrypted_data = "6";
                         }
-                        if (the_words == "J" || the_words == "j")
+                        if (letters == 'J' || letters == 'j')
                         {
-                            new_words = "7";
+                            storing_encrypted_data = "7";
                         }
-                        if (the_words == "K" || the_words == "k")
+                        if (letters == 'K' || letters == 'k')
                         {
-                            new_words = "8";
+                            storing_encrypted_data = "8";
                         }
-                        if (the_words == "L" || the_words == "l")
+                        if (letters == 'L' || letters == 'l')
                         {
-                            new_words = "9";
+                            storing_encrypted_data = "9";
                         }
-                        if (the_words == "M" || the_words == "m")
+                        if (letters == 'M' || letters == 'm')
                         {
-                            new_words = "10";
+                            storing_encrypted_data = "10";
                         }
-                        if (the_words == "N" || the_words == "n")
+                        if (letters == 'N' || letters == 'n')
                         {
-                            new_words = "11";
+                            storing_encrypted_data = "11";
                         }
-                        if (the_words == "O" || the_words == "o")
+                        if (letters == 'O' || letters == 'o')
                         {
-                            new_words = "12";
+                            storing_encrypted_data = "12";
                         }
-                        if (the_words == "P" || the_words == "p")
+                        if (letters == 'P' || letters == 'p')
                         {
-                            new_words = "13";
+                            storing_encrypted_data = "13";
                         }
-                        if (the_words == "Q" || the_words == "q")
+                        if (letters == 'Q' || letters == 'q')
                         {
-                            new_words = "14";
+                            storing_encrypted_data = "14";
                         }
-                        if (the_words == "R" || the_words == "r")
+                        if (letters == 'R' || letters == 'r')
                         {
-                            new_words = "15";
+                            storing_encrypted_data = "15";
                         }
-                        if (the_words == "S" || the_words == "s")
+                        if (letters == 'S' || letters == 's')
                         {
-                            new_words = "16";
+                            storing_encrypted_data = "16";
                         }
-                        if (the_words == "T" || the_words == "t")
+                        if (letters == 'T' || letters == 't')
                         {
-                            new_words = "17";
+                            storing_encrypted_data = "17";
                         }
-                        if (the_words == "U" || the_words == "u")
+                        if (letters == 'U' || letters == 'u')
                         {
-                            new_words = "18";
+                            storing_encrypted_data = "18";
                         }
-                        if (the_words == "V" || the_words == "v")
+                        if (letters == 'V' || letters == 'v')
                         {
-                            new_words = "19";
+                            storing_encrypted_data = "19";
                         }
-                        if (the_words == "W" || the_words == "w")
+                        if (letters == 'W' || letters == 'w')
                         {
-                            new_words = "20";
+                            storing_encrypted_data = "20";
                         }
-                        if (the_words == "X" || the_words == "x")
+                        if (letters == 'X' || letters == 'x')
                         {
-                            new_words = "21";
+                            storing_encrypted_data = "21";
                         }
-                        if (the_words == "Y" || the_words == "y")
+                        if (letters == 'Y' || letters == 'y')
                         {
-                            new_words = "22";
+                            storing_encrypted_data = "22";
                         }
-                        if (the_words == "Z" || the_words == "z")
+                        if (letters == 'Z' || letters == 'z')
                         {
-                            new_words = "23";
+                            storing_encrypted_data = "23";
+                        }
+                        if(letters == ' ')
+                        {
+                            storing_encrypted_data = "0";
                         }
                         //--------------------------------
-                        if (new_words == "1")
+                        if (storing_encrypted_data == "1")
                         {
-                            Console.Write(" Z");
+                            Console.Write("Z");
                         }
-                        if (new_words == "2")
+                        if (storing_encrypted_data == "2")
                         {
-                            Console.Write(" A");
+                            Console.Write("A");
                         }
-                        if (new_words == "3")
+                        if (storing_encrypted_data == "3")
                         {
-                            Console.Write(" B");
+                            Console.Write("B");
                         }
-                        if (new_words == "4")
+                        if (storing_encrypted_data == "4")
                         {
-                            Console.Write(" C");
+                            Console.Write("C");
                         }
-                        if (new_words == "5")
+                        if (storing_encrypted_data == "5")
                         {
-                            Console.Write(" D");
+                            Console.Write("D");
                         }
-                        if (new_words == "6")
+                        if (storing_encrypted_data == "6")
                         {
-                            Console.Write(" E");
+                            Console.Write("E");
                         }
-                        if (new_words == "7")
+                        if (storing_encrypted_data == "7")
                         {
-                            Console.Write(" F");
+                            Console.Write("F");
                         }
-                        if (new_words == "8")
+                        if (storing_encrypted_data == "8")
                         {
-                            Console.Write(" G");
+                            Console.Write("G");
                         }
-                        if (new_words == "9")
+                        if (storing_encrypted_data == "9")
                         {
-                            Console.Write(" H");
+                            Console.Write("H");
                         }
-                        if (new_words == "10")
+                        if (storing_encrypted_data == "10")
                         {
-                            Console.Write(" I");
+                            Console.Write("I");
                         }
-                        if (new_words == "11")
+                        if (storing_encrypted_data == "11")
                         {
-                            Console.Write(" J");
+                            Console.Write("J");
                         }
-                        if (new_words == "12")
+                        if (storing_encrypted_data == "12")
                         {
-                            Console.Write(" K");
+                            Console.Write("K");
                         }
-                        if (new_words == "13")
+                        if (storing_encrypted_data == "13")
                         {
-                            Console.Write(" L");
+                            Console.Write("L");
                         }
-                        if (new_words == "14")
+                        if (storing_encrypted_data == "14")
                         {
-                            Console.Write(" M");
+                            Console.Write("M");
                         }
-                        if (new_words == "15")
+                        if (storing_encrypted_data == "15")
                         {
-                            Console.Write(" N");
+                            Console.Write("N");
                         }
-                        if (new_words == "16")
+                        if (storing_encrypted_data == "16")
                         {
-                            Console.Write(" O");
+                            Console.Write("O");
                         }
-                        if (new_words == "17")
+                        if (storing_encrypted_data == "17")
                         {
-                            Console.Write(" P");
+                            Console.Write("P");
                         }
-                        if (new_words == "18")
+                        if (storing_encrypted_data == "18")
                         {
-                            Console.Write(" Q");
+                            Console.Write("Q");
                         }
-                        if (new_words == "19")
+                        if (storing_encrypted_data == "19")
                         {
-                            Console.Write(" R");
+                            Console.Write("R");
                         }
-                        if (new_words == "20")
+                        if (storing_encrypted_data == "20")
                         {
-                            Console.Write(" S");
+                            Console.Write("S");
                         }
-                        if (new_words == "21")
+                        if (storing_encrypted_data == "21")
                         {
-                            Console.Write(" T");
+                            Console.Write("T");
                         }
-                        if (new_words == "22")
+                        if (storing_encrypted_data == "22")
                         {
-                            Console.Write(" U");
+                            Console.Write("U");
                         }
-                        if (new_words == "23")
+                        if (storing_encrypted_data == "23")
                         {
-                            Console.Write(" V");
+                            Console.Write("V");
                         }
-                        if (new_words == "24")
+                        if (storing_encrypted_data == "24")
                         {
-                            Console.Write(" W");
+                            Console.Write("W");
                         }
-                        if (new_words == "25")
+                        if (storing_encrypted_data == "25")
                         {
-                            Console.Write(" X");
+                            Console.Write("X");
                         }
-                        if (new_words == "26")
+                        if (storing_encrypted_data == "26")
                         {
-                            Console.Write(" Y");
+                            Console.Write("Y");
+                        }
+                        if(storing_encrypted_data == "0")
+                        {
+                            Console.Write(" ");
                         }
                     }
                     Console.WriteLine();
