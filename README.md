@@ -1,1 +1,1 @@
-Encrypts text by using Caesar's Cipher
+Encrypts text by using Caesar's Cipher method
