@@ -20,7 +20,7 @@ namespace Encryption_and_Decryption
                     Console.Write("Write the message that you wish you encrypt: ");
                     string text = Console.ReadLine();
                     char[] chars = text.ToCharArray(0, text.Length);
-                    Console.Write("\nEncrpyted version: ");
+                    Console.Write("\nEncrypted version: ");
 
                     foreach (char letters in chars)
                     {
