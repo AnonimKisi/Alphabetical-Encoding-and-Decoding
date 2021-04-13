@@ -17,7 +17,7 @@ namespace Encryption_and_Decryption
             switch (input)
             {
                 case 1:
-                    Console.Write("Write the text that you wish you encrypt: ");
+                    Console.Write("Write the text that you want to encrypt: ");
                     string text = Console.ReadLine();
                     char[] chars = text.ToCharArray(0, text.Length);
                     Console.Write("\nEncrypted version: ");
@@ -93,7 +93,7 @@ namespace Encryption_and_Decryption
                 //---------------------------------------------------------------------------------------------------------
 
                 case 2:
-                    Console.Write("Write the encrypted text that you wish you decrypt: ");
+                    Console.Write("Write the encrypted text that you want to decrypt: ");
                     text = Console.ReadLine();
                     chars = text.ToCharArray(0, text.Length);
                     Console.Write("\nDecrypted version: ");
