@@ -1,2 +1,2 @@
-# Encryption-and-Decryption
-Encrypts text using Caesar's Cipher method
+# Caesar-s_Cipher_Encoding
+Encodes text using Caesar's Cipher method
