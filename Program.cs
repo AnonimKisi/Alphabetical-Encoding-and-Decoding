@@ -1,7 +1,7 @@
 //Made by AnonimKisi
 using System;
 
-namespace Encryption_and_Decryption
+namespace Caesar_Cipher_Encoding
 {
     class Program
     {
@@ -9,81 +9,81 @@ namespace Encryption_and_Decryption
         {
             Console.Title = "Made by AnonimKisi";
             Console.WriteLine("----------------------------------------------------------------------------------");
-            Console.WriteLine("Encryption: 1");
-            Console.WriteLine("Decryption: 2");
+            Console.WriteLine("Encoding: 1");
+            Console.WriteLine("Decoding: 2");
             Console.Write("\nInput: ");
             int input = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("----------------------------------------------------------------------------------");
             switch (input)
             {
                 case 1:
-                    Console.Write("Write the text that you want to encrypt: ");
+                    Console.Write("Write the text that you want to encode: ");
                     string text = Console.ReadLine();
                     char[] chars = text.ToCharArray(0, text.Length);
-                    Console.Write("\nEncrypted version: ");
+                    Console.Write("\nEncoded version: ");
 
                     foreach (char letters in chars)
                     {
-                        int storing_encrypted_data = (int)letters;
+                        int storing_encoded_data = (int)letters;
                         bool result = char.IsUpper(letters);
 
                         if (result == true)
                         {
                             if (letters == ' ')
                             {
-                                storing_encrypted_data = 0;
+                                storing_encoded_data = 0;
                             }
 
-                            char new_words = (char)(storing_encrypted_data + 4);
-                            new_words = Char.ToUpper(new_words);
+                            char new_letters = (char)(storing_encoded_data + 4);
+                            new_letters = Char.ToUpper(new_letters);
 
-                            if (new_words == 'İ')
+                            if (new_letters == 'İ')
                             {
-                                new_words = 'I';
+                                new_letters = 'I';
                             }
 
-                            if (storing_encrypted_data == 0)
+                            if (storing_encoded_data == 0)
                             {
-                                new_words = ' ';
+                                new_letters = ' ';
                             }
 
-                            if ((storing_encrypted_data + 4) > 90)
+                            if ((storing_encoded_data + 4) > 90)
                             {
-                                new_words = (char)(storing_encrypted_data - 22);
-                                new_words = Char.ToUpper(new_words);
+                                new_letters = (char)(storing_encoded_data - 22);
+                                new_letters = Char.ToUpper(new_letters);
                             }
 
-                            Console.Write(new_words);
+                            Console.Write(new_letters);
                         }
                         else if (result == false)
                         {
                             if (letters == ' ')
                             {
-                                storing_encrypted_data = 0;
+                                storing_encoded_data = 0;
                             }
 
-                            char new_words = (char)(storing_encrypted_data + 4);
-                            new_words = Char.ToLower(new_words);
+                            char new_letters = (char)(storing_encoded_data + 4);
+                            new_letters = Char.ToLower(new_letters);
 
-                            if (new_words == 'ı')
+                            if (new_letters == 'ı')
                             {
-                                new_words = 'i';
+                                new_letters = 'i';
                             }
 
-                            if (storing_encrypted_data == 0)
+                            if (storing_encoded_data == 0)
                             {
-                                new_words = ' ';
+                                new_letters = ' ';
                             }
 
-                            if ((storing_encrypted_data + 4) > 122)
+                            if ((storing_encoded_data + 4) > 122)
                             {
-                                new_words = (char)(storing_encrypted_data - 22);
-                                new_words = Char.ToLower(new_words);
+                                new_letters = (char)(storing_encoded_data - 22);
+                                new_letters = Char.ToLower(new_letters);
                             }
 
-                            Console.Write(new_words);
-                        }                        
-                        
+                            Console.Write(new_letters);
+                        }
+
                     }
 
                     Console.WriteLine();
@@ -93,61 +93,61 @@ namespace Encryption_and_Decryption
                 //---------------------------------------------------------------------------------------------------------
 
                 case 2:
-                    Console.Write("Write the encrypted text that you want to decrypt: ");
+                    Console.Write("Write the encoded text that you want to decode: ");
                     text = Console.ReadLine();
                     chars = text.ToCharArray(0, text.Length);
-                    Console.Write("\nDecrypted version: ");
+                    Console.Write("\nDecoded version: ");
 
                     foreach (char letters in chars)
                     {
-                        int storing_encrypted_data = (int)letters - 4;
+                        int storing_encoded_data = (int)letters - 4;
                         bool result = char.IsUpper(letters);
 
-                        if(result == true)
+                        if (result == true)
                         {
-                            if (storing_encrypted_data < 65)
+                            if (storing_encoded_data < 65)
                             {
-                                storing_encrypted_data = (storing_encrypted_data + 26);
+                                storing_encoded_data = (storing_encoded_data + 26);
                             }
 
                             if (letters == ' ')
                             {
-                                storing_encrypted_data = 0;
+                                storing_encoded_data = 0;
                             }
 
-                            char new_words = (char)storing_encrypted_data;
-                            new_words = Char.ToUpper(new_words);
+                            char new_letters = (char)storing_encoded_data;
+                            new_letters = Char.ToUpper(new_letters);
 
-                            if (storing_encrypted_data == 0)
+                            if (storing_encoded_data == 0)
                             {
-                                new_words = ' ';
+                                new_letters = ' ';
                             }
 
-                            Console.Write(new_words);
+                            Console.Write(new_letters);
                         }
                         else if (result == false)
                         {
-                            if (storing_encrypted_data < 97)
+                            if (storing_encoded_data < 97)
                             {
-                                storing_encrypted_data = (storing_encrypted_data + 26);
+                                storing_encoded_data = (storing_encoded_data + 26);
                             }
 
                             if (letters == ' ')
                             {
-                                storing_encrypted_data = 0;
+                                storing_encoded_data = 0;
                             }
 
-                            char new_words = (char)storing_encrypted_data;
-                            new_words = Char.ToLower(new_words);
+                            char new_letters = (char)storing_encoded_data;
+                            new_letters = Char.ToLower(new_letters);
 
-                            if (storing_encrypted_data == 0)
+                            if (storing_encoded_data == 0)
                             {
-                                new_words = ' ';
+                                new_letters = ' ';
                             }
 
-                            Console.Write(new_words);
+                            Console.Write(new_letters);
                         }
-                        
+
                     }
 
                     Console.WriteLine();
