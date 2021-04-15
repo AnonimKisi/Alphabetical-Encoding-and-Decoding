@@ -25,9 +25,8 @@ namespace Caesar_Cipher_Encoding
                     foreach (char letters in chars)
                     {
                         int storing_encoded_data = (int)letters;
-                        bool result = char.IsUpper(letters);
 
-                        if (result == true)
+                        if ((int)letters >= 65 && (int)letters <= 90)
                         {
                             if (letters == ' ')
                             {
@@ -55,7 +54,7 @@ namespace Caesar_Cipher_Encoding
 
                             Console.Write(new_letters);
                         }
-                        else if (result == false)
+                        else if ((int)letters >= 97 && (int)letters <= 122)
                         {
                             if (letters == ' ')
                             {
@@ -82,8 +81,10 @@ namespace Caesar_Cipher_Encoding
                             }
 
                             Console.Write(new_letters);
+                        }else
+                        {
+                            Console.Write(letters);
                         }
-
                     }
 
                     Console.WriteLine();
@@ -101,9 +102,8 @@ namespace Caesar_Cipher_Encoding
                     foreach (char letters in chars)
                     {
                         int storing_encoded_data = (int)letters - 4;
-                        bool result = char.IsUpper(letters);
 
-                        if (result == true)
+                         if ((int)letters >= 65 && (int)letters <= 90)
                         {
                             if (storing_encoded_data < 65)
                             {
@@ -125,7 +125,7 @@ namespace Caesar_Cipher_Encoding
 
                             Console.Write(new_letters);
                         }
-                        else if (result == false)
+                        else if ((int)letters >= 97 && (int)letters <= 122)
                         {
                             if (storing_encoded_data < 97)
                             {
@@ -146,6 +146,10 @@ namespace Caesar_Cipher_Encoding
                             }
 
                             Console.Write(new_letters);
+                        }
+                        else
+                        {
+                            Console.Write(letters);
                         }
 
                     }
