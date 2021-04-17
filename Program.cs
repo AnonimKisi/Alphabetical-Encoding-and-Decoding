@@ -28,20 +28,11 @@ namespace Caesar_Cipher_Encoding
 
                         if ((int)letters >= 65 && (int)letters <= 90)
                         {
-                            if (letters == ' ')
-                            {
-                                storing_encoded_data = 0;
-                            }
 
                             char new_letters = (char)(storing_encoded_data + 4);
                             new_letters = Char.ToUpper(new_letters);
 
-                            if (new_letters == 'İ')
-                            {
-                                new_letters = 'I';
-                            }
-
-                            if (storing_encoded_data == 0)
+                            if (letters == ' ')
                             {
                                 new_letters = ' ';
                             }
@@ -56,20 +47,11 @@ namespace Caesar_Cipher_Encoding
                         }
                         else if ((int)letters >= 97 && (int)letters <= 122)
                         {
-                            if (letters == ' ')
-                            {
-                                storing_encoded_data = 0;
-                            }
 
                             char new_letters = (char)(storing_encoded_data + 4);
                             new_letters = Char.ToLower(new_letters);
 
-                            if (new_letters == 'ı')
-                            {
-                                new_letters = 'i';
-                            }
-
-                            if (storing_encoded_data == 0)
+                            if (letters == ' ')
                             {
                                 new_letters = ' ';
                             }
@@ -81,7 +63,8 @@ namespace Caesar_Cipher_Encoding
                             }
 
                             Console.Write(new_letters);
-                        }else
+                        }
+                        else
                         {
                             Console.Write(letters);
                         }
@@ -103,22 +86,17 @@ namespace Caesar_Cipher_Encoding
                     {
                         int storing_encoded_data = (int)letters - 4;
 
-                         if ((int)letters >= 65 && (int)letters <= 90)
+                        if ((int)letters >= 65 && (int)letters <= 90)
                         {
                             if (storing_encoded_data < 65)
                             {
                                 storing_encoded_data = (storing_encoded_data + 26);
                             }
 
-                            if (letters == ' ')
-                            {
-                                storing_encoded_data = 0;
-                            }
-
                             char new_letters = (char)storing_encoded_data;
                             new_letters = Char.ToUpper(new_letters);
 
-                            if (storing_encoded_data == 0)
+                            if (letters == ' ')
                             {
                                 new_letters = ' ';
                             }
@@ -132,15 +110,10 @@ namespace Caesar_Cipher_Encoding
                                 storing_encoded_data = (storing_encoded_data + 26);
                             }
 
-                            if (letters == ' ')
-                            {
-                                storing_encoded_data = 0;
-                            }
-
                             char new_letters = (char)storing_encoded_data;
                             new_letters = Char.ToLower(new_letters);
 
-                            if (storing_encoded_data == 0)
+                            if (letters == ' ')
                             {
                                 new_letters = ' ';
                             }
